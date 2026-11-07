@@ -9,7 +9,7 @@ senv = env  # avoid shadowing with the action's 'env' parameter
 # Optional: keep your extra flag
 senv.Append(CXXFLAGS=["-Wno-conversion-null"])
 
-# ---- Detect MCU and map bootloader offsets ----
+
 board_config = senv.BoardConfig()
 mcu = (board_config.get("build.mcu") or senv.get("BOARD_MCU") or "").lower()
 
